@@ -1,13 +1,13 @@
-﻿# Local development runbook
+# Local development runbook
 
 ## Prerequisites
 
 | Tool | Version | Verify |
 |---|---|---|
-| Python | â‰¥ 3.12 | `python --version` |
+| Python | ≥ 3.12 | `python --version` |
 | uv | latest | `uv --version` |
-| Node.js | â‰¥ 20 | `node -v` |
-| pnpm | â‰¥ 9 | `pnpm -v` |
+| Node.js | ≥ 20 | `node -v` |
+| pnpm | ≥ 9 | `pnpm -v` |
 | Git | any recent | `git --version` |
 
 No Docker is required for local development: SQLite is the default database.
@@ -28,8 +28,8 @@ pnpm install
 pnpm dev:web
 ```
 
-- API: <http://127.0.0.1:8000> â€” interactive docs at `/docs`
-- Web: <http://127.0.0.1:5173> â€” Vite proxies `/api` to the API
+- API: <http://127.0.0.1:8000> — interactive docs at `/docs`
+- Web: <http://127.0.0.1:5173> — Vite proxies `/api` to the API
 
 ## Demo accounts
 

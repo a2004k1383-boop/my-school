@@ -14,9 +14,9 @@ from app.models.user import Role, User
 DEMO_PASSWORD = "Demo1234"
 
 DEMO_USERS: list[tuple[str, str, Role]] = [
-    ("parent@demo.example.com", "Ù…Ø±ÛŒÙ… Ø§Ø­Ù…Ø¯ÛŒ", Role.parent),
-    ("student@demo.example.com", "Ø¹Ù„ÛŒ Ø§Ø­Ù…Ø¯ÛŒ", Role.student),
-    ("teacher@demo.example.com", "Ø±Ø¶Ø§ Ú©Ø±ÛŒÙ…ÛŒ", Role.teacher),
+    ("parent@demo.example.com", "مریم احمدی", Role.parent),
+    ("student@demo.example.com", "علی احمدی", Role.student),
+    ("teacher@demo.example.com", "رضا کریمی", Role.teacher),
 ]
 
 
