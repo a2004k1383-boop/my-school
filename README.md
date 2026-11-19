@@ -32,6 +32,14 @@ The repository is built as a course project in software engineering: it demonstr
 
 Current deliverable: **login and registration pages** for the three roles, with a role-aware dashboard placeholder.
 
+## Screenshots
+
+| Login | Registration |
+|---|---|
+| ![Login page](docs/screenshots/login.png) | ![Registration page](docs/screenshots/register.png) |
+
+![API documentation](docs/screenshots/api-docs.png)
+
 ## Tech stack
 
 - **Frontend:** Vue 3 (`<script setup>`, TypeScript), Vite, Vue Router, Pinia, Vitest — Persian/RTL, Vazirmatn.
