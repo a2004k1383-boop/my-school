@@ -1,4 +1,4 @@
-﻿"""Seed demo users for local development and the demo script."""
+"""Seed demo users for local development and the demo script."""
 
 from __future__ import annotations
 

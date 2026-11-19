@@ -1,4 +1,4 @@
-﻿"""End-to-end smoke check against the real database (run after migrations + seed).
+"""End-to-end smoke check against the real database (run after migrations + seed).
 
 Usage:
     uv run alembic upgrade head
