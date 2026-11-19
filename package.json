@@ -1,0 +1,20 @@
+{
+  "name": "my-school",
+  "version": "0.1.0",
+  "private": true,
+  "description": "«مدرسه من» — school-parent-student communication platform",
+  "scripts": {
+    "dev:api": "uv --directory apps/api run uvicorn app.main:app --reload --port 8000",
+    "dev:web": "pnpm --filter @myschool/web dev",
+    "build:web": "pnpm --filter @myschool/web build",
+    "test:api": "uv --directory apps/api run pytest -q",
+    "test:web": "pnpm --filter @myschool/web test",
+    "verify:api": "uv --directory apps/api run ruff check . && uv --directory apps/api run mypy app && uv --directory apps/api run pytest -q",
+    "verify:web": "pnpm --filter @myschool/web verify",
+    "verify": "pnpm run verify:api && pnpm run verify:web"
+  },
+  "packageManager": "pnpm@10.0.0",
+  "engines": {
+    "node": ">=20"
+  }
+}
