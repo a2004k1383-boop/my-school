@@ -1,4 +1,4 @@
-﻿# Course submission â€” Â«Ù…Ø¯Ø±Ø³Ù‡ Ù…Ù†Â» / My School
+# Course submission â€” Â«Ù…Ø¯Ø±Ø³Ù‡ Ù…Ù†Â» / My School
 
 > Fill the fields marked `TODO` before uploading to Eleren (Ø§ÛŒÙ„Ø±Ù†).
 
@@ -47,13 +47,17 @@ Demo login: `parent@demo.example.com` / `Demo1234` (after `uv run python scripts
 
 | Check | Command | Result |
 |---|---|---|
-| Backend tests | `cd apps/api && uv run pytest -q` | 29 passed |
-| Backend lint | `uv run ruff check .` | TODO |
-| Backend types | `uv run mypy app` | TODO |
-| Frontend tests | `cd apps/web && pnpm test` | 20 passed |
-| Frontend types | `pnpm typecheck` | TODO |
-| Frontend build | `pnpm build` | TODO |
-| CI | GitHub Actions on `main` | TODO |
+| Backend tests | `cd apps/api && uv run pytest -q` | **29 passed**, coverage **93%** |
+| Backend lint | `uv run ruff check .` | **All checks passed** |
+| Backend format | `uv run ruff format --check .` | **34 files already formatted** |
+| Backend types | `uv run mypy app` | **no issues in 24 source files** |
+| Migration | `uv run alembic upgrade head` | `0001_identity` applied |
+| Seed + smoke | `uv run python scripts/seed_demo.py && uv run python scripts/smoke_test.py` | **SMOKE OK** (health, docs, login, me, refresh) |
+| Frontend tests | `cd apps/web && pnpm test` | **20 passed** (4 files) |
+| Frontend types | `pnpm typecheck` | clean |
+| Frontend lint | `pnpm lint` | clean |
+| Frontend build | `pnpm build` | built in ~2s, 171 kB JS / 57 kB gzip |
+| CI | GitHub Actions on `main` | pending first push |
 
 ## 6. Requirement coverage
 

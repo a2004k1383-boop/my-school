@@ -120,4 +120,10 @@ Single migration; deploy backend before frontend. Rollback: downgrade migration 
 
 | # | Cycle | Test / command | Red evidence | Green evidence |
 |---|---|---|---|---|
-| 1 | | | | |
+| 1 | Academic time | `uv run pytest tests/test_unit.py -q` | `zoneinfo._common.ZoneInfoNotFoundError: 'No time zone found with key Asia/Tehran'` — Windows ships no IANA database | added `tzdata>=2024.1`; 7 passed |
+| 2 | Focus management | `pnpm --filter @myschool/web test` | `expected <body></body> to be <input id="email">` — the view was mounted detached, so `document.activeElement` was `<body>` | mounted with `attachTo: document.body`; 20 passed |
+| 3 | API contract | `uv run pytest -q` | Tests were committed at `983356a` before any implementation; at that commit `apps/api` has no `pyproject.toml` and no `app` package, so collection cannot import the application (exit 2) | implementation commit `197380d`; `29 passed`, coverage 93% |
+| 4 | Web auth flows | `pnpm --filter @myschool/web test` | Authored from `SPEC.md` before the views existed (tests referenced `loginUser`/`registerUser` mocks and would fail on import) | implementation commit `fcbadd9`; `20 passed` |
+| 5 | End-to-end smoke | `uv run python scripts/smoke_test.py` | Login with the seeded account returned `422` — `email-validator` rejects the reserved `.local` domain | demo domain changed to `demo.example.com`; `SMOKE OK` (health, docs, login, me, refresh) |
+
+> Note: tests 3 and 4 were authored before their implementation commits (see `git log`), but the red state was a collection/import failure rather than a behavioural assertion failure. The two behavioural red→green cycles actually observed are #1, #2 and #5.
