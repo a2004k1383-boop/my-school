@@ -41,8 +41,8 @@ For every new feature:
 
 | ID | Feature / Workstream | Priority | Status | Dependencies | Specification | Plan | Evidence |
 |---|---|---:|---|---|---|---|---|
-| F-001 | Repository foundation: monorepo layout, tooling, configuration, CI, health check | P0 | In Review | — | `docs/features/F-001-foundation/SPEC.md` | `docs/features/F-001-foundation/PLAN.md` | commit `6a46779`; health smoke OK |
-| F-002 | Identity: registration, login, sessions, roles, teacher invite code | P0 | In Review | F-001 | `docs/features/F-002-identity/SPEC.md` | `docs/features/F-002-identity/PLAN.md` | commits `983356a`, `197380d`, `fcbadd9`; 29 API + 20 web tests |
+| F-001 | Repository foundation: monorepo layout, tooling, configuration, CI, health check | P0 | Done | — | `docs/features/F-001-foundation/SPEC.md` | `docs/features/F-001-foundation/PLAN.md` | commit `6a46779`; CI green |
+| F-002 | Identity: registration, login, sessions, roles, teacher invite code | P0 | Done | F-001 | `docs/features/F-002-identity/SPEC.md` | `docs/features/F-002-identity/PLAN.md` | commits `983356a`…`a9f458b`; 29 API + 20 web tests, CI green |
 | F-003 | School structure: classes, enrolments, parent–child links, teacher assignments | P0 | Proposed | F-002 | `docs/features/F-003-school-structure/SPEC.md` | `docs/features/F-003-school-structure/PLAN.md` | — |
 | F-004 | Weekly timetable per class and student | P1 | Proposed | F-003 | `docs/features/F-004-timetable/SPEC.md` | `docs/features/F-004-timetable/PLAN.md` | — |
 | F-005 | Assignments: create, publish, due dates, submission state, reminders | P1 | Proposed | F-003, F-004 | `docs/features/F-005-assignments/SPEC.md` | `docs/features/F-005-assignments/PLAN.md` | — |

@@ -12,6 +12,6 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versio
 - Persian RTL login and registration pages with accessible validation and error mapping.
 - Engineering governance: `AGENTS.md`, `Task-List.md`, SRS, architecture, roadmap, ADRs 0001–0005, feature SPEC/PLAN templates.
 
-## [0.1.0] — TBD
+## [0.1.0] — 2026-11-19
 
 First tagged release: F-001 + F-002 complete, CI green, demo script ready.
